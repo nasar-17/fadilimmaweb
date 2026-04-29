@@ -6,7 +6,7 @@ const VideoCard = ({ src, title, caption }) => {
     <motion.div 
       initial={{ opacity: 0, y: 80, scale: 0.9 }}
       whileInView={{ opacity: 1, y: 0, scale: 1 }}
-      viewport={{ once: false, margin: "-50px" }}
+      viewport={{ once: true, margin: "-50px" }}
       transition={{ 
         type: "spring",
         stiffness: 80,
@@ -39,7 +39,7 @@ const Videos = () => {
         <motion.div 
           initial={{ opacity: 0, y: 50, scale: 0.9 }}
           whileInView={{ opacity: 1, y: 0, scale: 1 }}
-          viewport={{ once: false, margin: "-50px" }}
+          viewport={{ once: true, margin: "-50px" }}
           transition={{ type: "spring", stiffness: 100, damping: 20 }}
           className="text-center mb-12"
         >

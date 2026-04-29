@@ -24,7 +24,7 @@ function App() {
           playsInline
           className="absolute inset-0 w-full h-full object-cover"
         ></video>
-        <div className="absolute inset-0 bg-black/40 backdrop-blur-[30px]"></div>
+        <div className="absolute inset-0 bg-black/60 md:bg-black/40 backdrop-blur-md md:backdrop-blur-[30px]"></div>
       </div>
 
       <FloatingDecorations />

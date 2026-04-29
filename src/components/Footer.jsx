@@ -20,7 +20,7 @@ const Footer = () => {
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false, margin: "-10px" }}
+          viewport={{ once: true, margin: "-10px" }}
           transition={{ duration: 0.6 }}
           className="max-w-4xl mx-auto glass-card bg-white/5 border border-white/10 p-6 md:px-10 rounded-[2rem]"
         >
