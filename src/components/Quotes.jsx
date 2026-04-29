@@ -42,7 +42,7 @@ const Quotes = () => {
         <motion.div 
           initial={{ opacity: 0, scale: 0.98 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: false, margin: "-50px" }}
+          viewport={{ once: true, margin: "-50px" }}
           transition={{ type: "spring", stiffness: 80, damping: 20 }}
           className="glass-card bg-white/5 border border-white/10 p-8 md:p-16 rounded-[3rem] text-center relative overflow-hidden"
         >

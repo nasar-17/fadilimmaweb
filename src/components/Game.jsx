@@ -123,7 +123,7 @@ const Game = () => {
     <motion.div
       initial={{ opacity: 0, y: 20, scale: 0.98 }}
       whileInView={{ opacity: 1, y: 0, scale: 1 }}
-      viewport={{ once: false, margin: '-50px' }}
+      viewport={{ once: true, margin: '-50px' }}
       transition={{ 
         type: "spring",
         stiffness: 100,
