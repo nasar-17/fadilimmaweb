@@ -15,7 +15,7 @@
 
 @layer utilities {
   .glass {
-    @apply bg-white/10 backdrop-blur-md border border-white/20 shadow-xl;
+    @apply bg-white/10 backdrop-blur-sm md:backdrop-blur-md border border-white/20 shadow-xl;
   }
   .glass-card {
     @apply glass rounded-2xl p-6;

@@ -72,7 +72,7 @@ const FloatingMelody = ({ heroAudioRef }) => {
         ref={kataAudioRef} 
         src="/kata%20kata.mp3" 
         onEnded={handleEnded} 
-        preload="auto" 
+        preload="none" 
         onCanPlayThrough={() => {
           if (kataAudioRef.current) kataAudioRef.current.volume = 1.0;
         }}

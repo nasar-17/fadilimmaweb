@@ -40,7 +40,7 @@ const Quotes = () => {
     <section className="relative w-full py-24 overflow-hidden flex items-center justify-center border-t border-white/10">
       <div className="relative z-10 container mx-auto px-4 max-w-4xl">
         <motion.div 
-          initial={{ opacity: 0, scale: 0.9 }}
+          initial={{ opacity: 0, scale: 0.98 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: false, margin: "-50px" }}
           transition={{ type: "spring", stiffness: 80, damping: 20 }}

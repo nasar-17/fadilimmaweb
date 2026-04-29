@@ -23,7 +23,7 @@ const Hero = ({ audioRef }) => {
     <section className="relative w-full h-screen flex items-center justify-center overflow-hidden">
       {/* Main Glass Card */}
       <motion.div 
-        initial={{ opacity: 0, y: 80, scale: 0.9 }}
+        initial={{ opacity: 0, y: 40, scale: 0.98 }}
         whileInView={{ opacity: 1, y: 0, scale: 1 }}
         viewport={{ once: false, margin: "-50px" }}
         transition={{ 
@@ -51,7 +51,7 @@ const Hero = ({ audioRef }) => {
           </div>
         </div>
         
-        <audio ref={audioRef} src="/Nuca - MASA INI, NANTI, DAN MASA INDAH LAINNNYA Lyric Video.mp3" loop />
+        <audio ref={audioRef} src="/Nuca - MASA INI, NANTI, DAN MASA INDAH LAINNNYA Lyric Video.mp3" loop preload="none" />
       </motion.div>
     </section>
   );

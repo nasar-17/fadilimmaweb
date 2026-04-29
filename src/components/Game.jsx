@@ -121,7 +121,7 @@ const Game = () => {
   // ─── LOCKED SCREEN ───
   const renderLocked = () => (
     <motion.div
-      initial={{ opacity: 0, y: 80, scale: 0.9 }}
+      initial={{ opacity: 0, y: 20, scale: 0.98 }}
       whileInView={{ opacity: 1, y: 0, scale: 1 }}
       viewport={{ once: false, margin: '-50px' }}
       transition={{ 
@@ -284,7 +284,7 @@ const Game = () => {
     const isWin = score === TOTAL_ROUNDS;
     return (
       <motion.div
-        initial={{ opacity: 0, scale: 0.9 }}
+        initial={{ opacity: 0, scale: 0.98 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.6 }}
         className="glass-panel max-w-md mx-auto text-center text-white"

@@ -18,7 +18,7 @@ const Footer = () => {
     <footer className="relative w-full py-10 overflow-hidden text-white bg-transparent">
       <div className="relative z-10 container mx-auto px-4">
         <motion.div 
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false, margin: "-10px" }}
           transition={{ duration: 0.6 }}

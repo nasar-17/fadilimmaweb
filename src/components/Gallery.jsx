@@ -14,7 +14,7 @@ const Gallery = () => {
     <section className="relative w-full min-h-screen py-20 overflow-hidden">
       <div className="relative z-10 container mx-auto px-4 max-w-5xl">
         <motion.div 
-          initial={{ opacity: 0, y: 50, scale: 0.9 }}
+          initial={{ opacity: 0, y: 20, scale: 0.98 }}
           whileInView={{ opacity: 1, y: 0, scale: 1 }}
           viewport={{ once: false, margin: "-50px" }}
           transition={{ type: "spring", stiffness: 100, damping: 20 }}
@@ -33,7 +33,7 @@ const Gallery = () => {
           ].map((pair, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 100, scale: 0.8, rotate: index % 2 === 0 ? -10 : 10 }}
+              initial={{ opacity: 0, y: 40, scale: 0.95, rotate: index % 2 === 0 ? -3 : 3 }}
               whileInView={{ opacity: 1, y: 0, scale: 1, rotate: 0 }}
               viewport={{ once: false, margin: "-50px" }}
               transition={{ 

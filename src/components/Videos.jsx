@@ -19,7 +19,7 @@ const VideoCard = ({ src, title, caption }) => {
 
   return (
     <motion.div 
-      initial={{ opacity: 0, y: 80, scale: 0.9 }}
+      initial={{ opacity: 0, y: 30, scale: 0.98 }}
       whileInView={{ opacity: 1, y: 0, scale: 1 }}
       viewport={{ once: false, margin: "-50px" }}
       transition={{ 
@@ -76,7 +76,7 @@ const Videos = () => {
     <section className="relative w-full py-20 overflow-hidden min-h-screen flex items-center border-t border-white/10">
       <div className="relative z-10 container mx-auto px-4">
         <motion.div 
-          initial={{ opacity: 0, y: 50, scale: 0.9 }}
+          initial={{ opacity: 0, y: 20, scale: 0.98 }}
           whileInView={{ opacity: 1, y: 0, scale: 1 }}
           viewport={{ once: false, margin: "-50px" }}
           transition={{ type: "spring", stiffness: 100, damping: 20 }}
