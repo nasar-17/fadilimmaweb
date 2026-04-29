@@ -5,6 +5,7 @@ import { Play, Pause } from 'lucide-react';
 const Hero = ({ audioRef }) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [hasStarted, setHasStarted] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
 
   const togglePlay = () => {
     if (isPlaying) {
@@ -39,8 +40,16 @@ const Hero = ({ audioRef }) => {
 
         {/* Music Player */}
         <div className="flex items-center gap-4 bg-white/10 rounded-full p-2 pr-6 border border-white/20 backdrop-blur-md">
-          <div className="w-12 h-12 rounded-full overflow-hidden flex-shrink-0 relative group cursor-pointer shadow-lg" onClick={togglePlay}>
-            <img src="/foto cover-min.jpg" alt="Album Cover" className="w-full h-full object-cover" />
+          <div 
+            className={`w-12 h-12 rounded-full overflow-hidden flex-shrink-0 relative group cursor-pointer shadow-lg ${!isLoaded ? 'skeleton' : ''}`} 
+            onClick={togglePlay}
+          >
+            <img 
+              src="/foto cover-min.jpg" 
+              alt="Album Cover" 
+              className={`w-full h-full object-cover transition-opacity duration-500 ${isLoaded ? 'opacity-100' : 'opacity-0'}`} 
+              onLoad={() => setIsLoaded(true)}
+            />
             <div className="absolute inset-0 bg-black/40 flex items-center justify-center transition-opacity">
               {isPlaying ? <Pause size={20} className="text-white fill-white" /> : <Play size={20} className="text-white fill-white ml-1" />}
             </div>

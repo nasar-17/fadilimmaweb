@@ -220,7 +220,7 @@ const Game = () => {
                     animate={{ opacity: 1, scale: 1 }}
                     className="absolute inset-0 flex items-center justify-center p-2"
                   >
-                    <div className="w-full h-full rounded-full overflow-hidden border-2 border-white/40">
+                    <div className={`w-full h-full rounded-full overflow-hidden border-2 border-white/40 ${!revealed ? 'skeleton' : ''}`}>
                       <img
                         src="/mandiri-boy-min.jpeg"
                         alt="Found!"

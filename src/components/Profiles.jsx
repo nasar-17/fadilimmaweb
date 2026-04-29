@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
 const InstagramIcon = ({ size = 24 }) => (
@@ -19,6 +19,21 @@ const InstagramIcon = ({ size = 24 }) => (
   </svg>
 );
 
+const ProfileImage = ({ src, alt }) => {
+  const [isLoaded, setIsLoaded] = useState(false);
+  return (
+    <div className={`w-32 h-32 rounded-full overflow-hidden border-4 border-white/30 shadow-xl mb-4 ${!isLoaded ? 'skeleton' : ''}`}>
+      <img 
+        src={src} 
+        alt={alt} 
+        className={`w-full h-full object-cover transition-opacity duration-500 ${isLoaded ? 'opacity-100' : 'opacity-0'}`} 
+        onLoad={() => setIsLoaded(true)}
+        loading="lazy"
+      />
+    </div>
+  );
+};
+
 const Profiles = () => {
   return (
     <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden py-20">
@@ -37,9 +52,7 @@ const Profiles = () => {
             }}
             className="w-full md:w-1/2 glass-card flex flex-col items-center text-center text-white"
           >
-            <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-white/30 shadow-xl mb-4">
-              <img src="/mandiri-boy-min.jpeg" alt="Boy" className="w-full h-full object-cover" loading="lazy" />
-            </div>
+            <ProfileImage src="/mandiri-boy-min.jpeg" alt="Boy" />
             <h2 className="text-2xl font-serif font-semibold mb-1">Fadil</h2>
             <a 
               href="https://www.instagram.com/muhammadfadilfajri/" 
@@ -66,9 +79,7 @@ const Profiles = () => {
             }}
             className="w-full md:w-1/2 glass-card flex flex-col items-center text-center text-white"
           >
-            <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-white/30 shadow-xl mb-4">
-              <img src="/mandiri-girl-min.jpeg" alt="Girl" className="w-full h-full object-cover" loading="lazy" />
-            </div>
+            <ProfileImage src="/mandiri-girl-min.jpeg" alt="Girl" />
             <h2 className="text-2xl font-serif font-semibold mb-1">Imma</h2>
             <a 
               href="https://www.instagram.com/nrrhkmaaaa/" 

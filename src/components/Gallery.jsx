@@ -2,6 +2,28 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X } from 'lucide-react';
 
+const GalleryImage = ({ src, onClick }) => {
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  return (
+    <div 
+      className={`bg-white/90 backdrop-blur-sm p-2 sm:p-3 pb-8 sm:pb-12 rounded-lg shadow-xl cursor-pointer transform transition-all duration-300 hover:scale-105 hover:z-10 w-1/2`}
+      onClick={() => onClick(src)}
+    >
+      <div className={`relative w-full aspect-square overflow-hidden rounded-md border border-gray-200 ${!isLoaded ? 'skeleton' : ''}`}>
+        <img 
+          src={src} 
+          alt="Moment" 
+          className={`w-full h-full object-cover transition-opacity duration-500 ${isLoaded ? 'opacity-100' : 'opacity-0'}`} 
+          onLoad={() => setIsLoaded(true)}
+          loading="lazy" 
+          decoding="async" 
+        />
+      </div>
+    </div>
+  );
+};
+
 const Gallery = () => {
   const [selectedImg, setSelectedImg] = useState(null);
 
@@ -45,15 +67,11 @@ const Gallery = () => {
               className="glass-card flex justify-center gap-4 sm:gap-8 w-full max-w-2xl bg-white/5"
             >
               {pair.map((img, i) => (
-                <div 
-                  key={i}
-                  className={`bg-white/90 backdrop-blur-sm p-2 sm:p-3 pb-8 sm:pb-12 rounded-lg shadow-xl cursor-pointer transform transition-all duration-300 hover:scale-105 hover:z-10 ${i % 2 === 0 ? '-rotate-3 hover:rotate-0' : 'rotate-3 hover:rotate-0'} w-1/2`}
-                  onClick={() => setSelectedImg(img)}
-                >
-                  <div className="relative w-full aspect-square overflow-hidden rounded-md border border-gray-200">
-                    <img src={img} alt={`Moment`} className="w-full h-full object-cover" loading="lazy" decoding="async" />
-                  </div>
-                </div>
+                <GalleryImage 
+                  key={i} 
+                  src={img} 
+                  onClick={setSelectedImg} 
+                />
               ))}
             </motion.div>
           ))}
