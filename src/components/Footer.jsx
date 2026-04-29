@@ -36,7 +36,7 @@ const Footer = () => {
             {/* Logo Section */}
             <div className="flex items-center gap-3">
               <div className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center border border-white/10 overflow-hidden shadow-lg">
-                <img src="/Logo.png" alt="Drena Creative Logo" className="w-full h-full object-contain p-1.5" />
+                <img src="/Logo-min.png" alt="Drena Creative Logo" className="w-full h-full object-contain p-1.5" loading="lazy" />
               </div>
               <div className="flex flex-col items-start">
                 <span className="font-semibold text-white/90 tracking-[0.2em] text-xs uppercase">Drena Creative</span>

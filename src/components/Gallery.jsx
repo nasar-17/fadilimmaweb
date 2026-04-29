@@ -6,8 +6,8 @@ const Gallery = () => {
   const [selectedImg, setSelectedImg] = useState(null);
 
   const images = [
-    '/4.jpeg', '/5.jpeg', '/6.jpeg', 
-    '/7.jpeg', '/8.jpeg', '/9.jpeg'
+    '/4-min.jpeg', '/5-min.jpeg', '/6-min.jpeg', 
+    '/7-min.jpeg', '/8-min.jpeg', '/9-min.jpeg'
   ];
 
   return (
@@ -27,9 +27,9 @@ const Gallery = () => {
         {/* Gallery Cards */}
         <div className="flex flex-col gap-8 items-center">
           {[
-            ['/4.jpeg', '/5.jpeg'],
-            ['/6.jpeg', '/7.jpeg'],
-            ['/8.jpeg', '/9.jpeg']
+            ['/4-min.jpeg', '/5-min.jpeg'],
+            ['/6-min.jpeg', '/7-min.jpeg'],
+            ['/8-min.jpeg', '/9-min.jpeg']
           ].map((pair, index) => (
             <motion.div
               key={index}
@@ -51,7 +51,7 @@ const Gallery = () => {
                   onClick={() => setSelectedImg(img)}
                 >
                   <div className="relative w-full aspect-square overflow-hidden rounded-md border border-gray-200">
-                    <img src={img} alt={`Moment`} className="w-full h-full object-cover" />
+                    <img src={img} alt={`Moment`} className="w-full h-full object-cover" loading="lazy" decoding="async" />
                   </div>
                 </div>
               ))}

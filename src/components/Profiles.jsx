@@ -38,7 +38,7 @@ const Profiles = () => {
             className="w-full md:w-1/2 glass-card flex flex-col items-center text-center text-white"
           >
             <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-white/30 shadow-xl mb-4">
-              <img src="/mandiri-boy.jpeg" alt="Boy" className="w-full h-full object-cover" />
+              <img src="/mandiri-boy-min.jpeg" alt="Boy" className="w-full h-full object-cover" loading="lazy" />
             </div>
             <h2 className="text-2xl font-serif font-semibold mb-1">Fadil</h2>
             <a 
@@ -67,7 +67,7 @@ const Profiles = () => {
             className="w-full md:w-1/2 glass-card flex flex-col items-center text-center text-white"
           >
             <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-white/30 shadow-xl mb-4">
-              <img src="/mandiri-girl.jpeg" alt="Girl" className="w-full h-full object-cover" />
+              <img src="/mandiri-girl-min.jpeg" alt="Girl" className="w-full h-full object-cover" loading="lazy" />
             </div>
             <h2 className="text-2xl font-serif font-semibold mb-1">Imma</h2>
             <a 

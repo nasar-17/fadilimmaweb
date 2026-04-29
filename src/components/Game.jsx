@@ -222,9 +222,10 @@ const Game = () => {
                   >
                     <div className="w-full h-full rounded-full overflow-hidden border-2 border-white/40">
                       <img
-                        src="/mandiri-boy.jpeg"
+                        src="/mandiri-boy-min.jpeg"
                         alt="Found!"
                         className="w-full h-full object-cover"
+                        loading="lazy"
                       />
                     </div>
                   </motion.div>
