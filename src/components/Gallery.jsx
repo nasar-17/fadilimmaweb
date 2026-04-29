@@ -16,7 +16,7 @@ const Gallery = () => {
         <motion.div 
           initial={{ opacity: 0, y: 50, scale: 0.9 }}
           whileInView={{ opacity: 1, y: 0, scale: 1 }}
-          viewport={{ once: true, margin: "-50px" }}
+          viewport={{ once: false, margin: "-50px" }}
           transition={{ type: "spring", stiffness: 100, damping: 20 }}
           className="text-center mb-12"
         >
@@ -35,7 +35,7 @@ const Gallery = () => {
               key={index}
               initial={{ opacity: 0, y: 100, scale: 0.8, rotate: index % 2 === 0 ? -10 : 10 }}
               whileInView={{ opacity: 1, y: 0, scale: 1, rotate: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
+              viewport={{ once: false, margin: "-50px" }}
               transition={{ 
                 type: "spring",
                 stiffness: 70,

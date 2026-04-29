@@ -14,17 +14,14 @@ function App() {
 
   return (
     <div className="relative w-full min-h-screen bg-black text-white selection:bg-white/30 overflow-x-hidden font-sans">
-      {/* Global Background Video */}
-      <div className="fixed inset-0 z-0 overflow-hidden bg-black">
-        <video 
-          src="/video1.mp4" 
-          autoPlay 
-          loop 
-          muted 
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover"
-        ></video>
-        <div className="absolute inset-0 bg-black/60 md:bg-black/40 backdrop-blur-md md:backdrop-blur-[30px]"></div>
+      {/* Global Background Image */}
+      <div className="fixed inset-0 z-0 overflow-hidden">
+        <img 
+          src="/2-min.jpeg" 
+          alt="Background" 
+          className="absolute inset-0 w-full h-full object-cover" 
+        />
+        <div className="absolute inset-0 bg-black/70 backdrop-blur-sm"></div>
       </div>
 
       <FloatingDecorations />
